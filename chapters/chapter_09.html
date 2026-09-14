@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Глава 9. Использование МСФО в финансовом моделировании</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<a href="../index.html" class="return-link">← Вернуться к оглавлению</a>
+<div class="chapter-content">
+    <h1>Глава 9. Использование международных стандартов финансовой отчётности в финансовом моделировании</h1>
+
+    <p>Если финансовая модель разрабатывается для привлечения зарубежных инвестиций, или инвесторами являются компании, которые формируют свою отчётность по МСФО, то разумно взять за основу формат отчётности по МСФО. В настоящее время МСФО обязательны к применению финансовыми, страховыми, клиринговыми компаниями, акционерными обществами с акциями во владении государства, компаниями, чьи ценные бумаги котируются на организованном рынке, управляющими компаниями инвестиционных фондов, паевых инвестиционных фондов и некоторыми другими организациями. Другие компании могут применять МСФО добровольно.</p>
+    
+    <p>При формировании финансовой модели, состоящей из трех форм прогнозной отчётности, не всегда возможно ограничиться РСБУ. Дело в том, что бизнес, который надо охватить финансовой моделью, может состоять из нескольких взаимосвязанных юридических лиц. Например, он может состоять из трех юридических лиц, одно из которых владеет основными средствами (владеющая компания), второе обеспечивает производственный процесс (производственная компания), а третье занимается административной работой (управляющая компания). Тогда наилучшим способом будет формирование консолидированной финансовой модели по МСФО или приближенно к МСФО.</p>
+    
+    <p>Сделаем краткий обзор МСФО и отметим основные требования, которые должны быть приняты во внимание при подготовке финансовой модели по МСФО.</p>
+    
+    <p>Надо понимать, что план-фактный анализ финансовой модели, сформированной по МСФО, также придется делать по МСФО. Ценность любой финансовой модели зависит от возможности сравнения её показателей с фактом. Учёт по МСФО можно вести параллельно с учётом по РСБУ (например, с помощью второго плана счетов), а можно формировать отчётность путем трансформации и корректировок отчётности по РСБУ (наиболее распространенный вариант). Так, для консолидации отчётности материнской и дочерней компаний надо сделать корректировки по исключению (элиминированию) оборотов между ними. Благодаря тому, что за последние годы реализовывалась программа по сближению российских стандартов учёта и МСФО, и многие правила российского учёта «списаны» с МСФО, то не так много трансформационных корректировок придётся делать для приближённого соответствия МСФО.</p>
+    
+    <p>Отчётность по МСФО отличается от отчётности по РСБУ набором, расположением и составом статей. Но главное отличие состоит обычно в том, что по МСФО делают консолидированную отчётность группы компаний (в РСБУ положений о правилах консолидации нет). Если несколько юридических лиц являются частями одной группы (т.е. находятся под контролем одних и тех же лиц), то консолидация предполагает объединение их отчётности так, как если бы это было одно юридическое лицо. Кроме того, если отчётность по МСФО составляется в иностранной валюте, то возникают курсовые разницы от пересчёта показателей в другую валюту. Есть и другие отличия, о которых речь пойдет в обзоре МСФО.</p>
+    
+    <p>Ниже представлен примерный вариант отчётности верхнего уровня (т.е. без детализации) по МСФО, который можно использовать и как формат финансовой модели.</p>
+
+    <!-- ТАБЛИЦА 9.1 -->
+    <figure class="table">
+        <figcaption>Таб.9.1. Примерный формат отчёта о прибылях и убытках по МСФО.</figcaption>
+        <table>
+            <colgroup>
+                <col style="width: 50%;">
+                <col style="width: 50%;">
+            </colgroup>
+            <tbody>
+                <tr><td>Отчёт о прибылях и убытках</td><td>Profit or loss</td></tr>
+                <tr><td>Прибыли и убытки по операционной деятельности</td><td>Profit (loss)</td></tr>
+                <tr><td>Выручка</td><td>Revenue</td></tr>
+                <tr><td>Себестоимость продаж</td><td>Cost of sales</td></tr>
+                <tr><td>Валовая прибыль</td><td>Gross profit</td></tr>
+                <tr><td>Процентный доход, рассчитанный по методу эффективной процентной ставки</td><td>Income calculated on effective rate basis</td></tr>
+                <tr><td>Прочие операционные доходы</td><td>Other operating income</td></tr>
+                <tr><td>Коммерческие расходы</td><td>Distribution costs</td></tr>
+                <tr><td>Административные расходы</td><td>Administrative expenses</td></tr>
+                <tr><td>Прочие расходы</td><td>Other expense</td></tr>
+                <tr><td>&nbsp;&nbsp;Расходы на исследования и разработки</td><td>Research and exploration expense</td></tr>
+                <tr><td>&nbsp;&nbsp;Чистые расходы по ожидаемым кредитным убыткам финансовых активов и активов по договорам с покупателями</td><td>Net loss from expected credit impairments of financial assets and assets of customer agreements</td></tr>
+                <tr><td>Прочие прибыли и убытки</td><td>Other gains (losses)</td></tr>
+                <tr><td>Результат от операционной деятельности</td><td>Profit (loss) from operating activities</td></tr>
+                <tr><td>Финансовые доходы</td><td>Finance income</td></tr>
+                <tr><td>Финансовые расходы</td><td>Finance costs</td></tr>
+                <tr><td>Доли в прибыли ассоциированных и совместных предприятий по методу долевого участия</td><td>Share of profit (loss) of associates and joint ventures accounted for using equity method</td></tr>
+                <tr><td>Прочие прибыли (убытки) от дочерних, совместных, ассоциированных компаний</td><td>Other income (expense) from subsidiaries, jointly controlled entities and associates</td></tr>
+                <tr><td>Прибыль (убыток) до налога на прибыль</td><td>Profit (loss) before tax</td></tr>
+                <tr><td>Доход (расход) по налогу на прибыль</td><td>Tax income (expense)</td></tr>
+                <tr><td>Прибыль (убыток) от продолжающихся операций</td><td>Profit (loss) from continuing operations</td></tr>
+                <tr><td>Прибыль (убыток) от прекращаемых операций</td><td>Profit (loss) from discontinued operations</td></tr>
+                <tr><td>Чистая прибыль (убыток)</td><td>Profit (loss)</td></tr>
+                <tr><td>в том числе</td><td>Profit (loss), attributable to</td></tr>
+                <tr><td>&nbsp;&nbsp;относящийся к собственникам материнской компании</td><td>Profit (loss), attributable to owners of parent</td></tr>
+                <tr><td>&nbsp;&nbsp;относящийся к неконтролируемым долям участия</td><td>Profit (loss), attributable to non-controlling interests</td></tr>
+            </tbody>
+        </table>
+    </figure>
+
+    <!-- ТАБЛИЦА 9.2 -->
+    <figure class="table">
+        <figcaption>Таб.9.2. Примерный формат отчёта о финансовом положении (баланс) по МСФО.</figcaption>
+        <table>
+            <colgroup>
+                <col style="width: 5%;">
+                <col style="width: 40%;">
+                <col style="width: 55%;">
+            </colgroup>
+            <tbody>
+                <tr><td>10000</td><td>Отчёт о финансовом положении (баланс)</td><td>Statement of financial position (Balance sheet)</td></tr>
+                <tr><td>11000</td><td>Активы</td><td>Assets</td></tr>
+                <tr><td>11100</td><td>Внеоборотные активы</td><td>Non-current assets</td></tr>
+                <tr><td>11101</td><td>Основные средства</td><td>Property, plant and equipment</td></tr>
+                <tr><td>11102</td><td>Активы в форме права пользования (Основные средства в лизинге)</td><td>Right-of-use assets</td></tr>
+                <tr><td>11103</td><td>Инвестиционные основные средства</td><td>Investment property</td></tr>
+                <tr><td>11104</td><td>Гудвил</td><td>Goodwill</td></tr>
+                <tr><td>11105</td><td>Нематериальные активы (кроме гудвила)</td><td>Intangible assets other than goodwill</td></tr>
+                <tr><td>11106</td><td>Инвестиции по методу долевого участия (в ассоциированные и совместные предприятия)</td><td>Investments accounted for using equity method (in associates and joint ventures)</td></tr>
+                <tr><td>11107</td><td>Инвестиции в дочерние, совместные и ассоциированные компании, не включенные в консолидированную отчётность</td><td>Investments in subsidiaries, joint ventures and associates reported in separate financial statements</td></tr>
+                <tr><td>11108</td><td>Внеобротные биологические активы</td><td>Non-current biological assets</td></tr>
+                <tr><td>11109</td><td>Торговая и прочая долгосрочная дебиторская задолженность</td><td>Trade and other non-current receivables</td></tr>
+                <tr><td>11110</td><td>Долгосрочные запасы</td><td>Non-current inventories</td></tr>
+                <tr><td>11111</td><td>Отложенные налоговые активы</td><td>Deferred tax assets</td></tr>
+                <tr><td>11112</td><td>Долгосрочная часть оборотных активов</td><td>Current tax assets, non-current</td></tr>
+                <tr><td>11113</td><td>Инвестиции в долевые инструменты</td><td>Investments in equity instruments</td></tr>
+                <tr><td>11114</td><td>Прочие внеоборотные финансовые активы</td><td>Other non-current financial assets</td></tr>
+                <tr><td>11115</td><td>Прочие внеоборотные нефинансовые активы</td><td>Other non-current non-financial assets</td></tr>
+                <tr><td>11116</td><td>Внеобортные активы, переданные в залог как обеспечение получателю с правом продажи или передачи в залог на основании договора или обычая</td><td>Non-current non-cash assets pledged as collateral for which transferee has right by contract or custom to sell or repledge collateral</td></tr>
+                <tr><td></td><td>Итого внеоборотные активы</td><td>Total non-current assets</td></tr>
+                <tr><td>11200</td><td>Оборотные активы</td><td>Current assets</td></tr>
+                <tr><td>11201</td><td>Запасы</td><td>Current inventories</td></tr>
+                <tr><td>11202</td><td>Торговая и прочая дебиторская задолженность</td><td>Trade and other current receivables</td></tr>
+                <tr><td>11203</td><td>Текущие налоговые активы (Предоплаты по налогам)</td><td>Current tax assets (Prepayments of taxes)</td></tr>
+                <tr><td>11204</td><td>Текущие биологические активы</td><td>Current biological assets</td></tr>
+                <tr><td>11205</td><td>Прочие текущие финансовые активы</td><td>Other current financial assets</td></tr>
+                <tr><td>11206</td><td>Прочие текущие нефинансовые активы</td><td>Other current non-financial assets</td></tr>
+                <tr><td>11207</td><td>Деньги и денежные эквиваленты</td><td>Cash and cash equivalents</td></tr>
+                <tr><td>11208</td><td>Оборотные активы, переданные в залог как обеспечение получателю с правом продажи или передачи в залог на основании договора или обычая</td><td>Current non-cash assets pledged as collateral for which transferee has right by contract or custom to sell or repledge collateral</td></tr>
+                <tr><td>11209</td><td>Внеоборотные активы, классифицированные как предназначенные для продажи (или активы выбывающей группы)</td><td>Non-current assets classified as for sale or assets of disposal group</td></tr>
+                <tr><td></td><td>Итого оборотные активы</td><td>Total current assets</td></tr>
+                <tr><td></td><td>Итого активы</td><td>Total assets</td></tr>
+                <tr><td>12000</td><td>Капитал и обязательства</td><td>Equity and liabilities</td></tr>
+                <tr><td>12100</td><td>Капитал</td><td>Equity</td></tr>
+                <tr><td>12101</td><tD>Уставный (акционерный) капитал</tD><td>Issued capital</td></tr>
+                <tr><td>12102</td><td>Нераспределенная прибыль</td><td>Retained earnings</td></tr>
+                <tr><td>12103</td><td>Премия на акции (превышение над номинальной стоимостью акций, эмиссионный доход)</td><td>Share premium</td></tr>
+                <tr><td>12104</td><td>Собственные акции во владении компании</td><td>Treasury shares</td></tr>
+                <tr><td>12105</td><td>Прочие доли участия</td><td>Other equity interest</td></tr>
+                <tr><td>12106</td><td>Добавочный капитал (прочие резервы):</td><td>Other reserves:</td></tr>
+                <tr><td></td><td>&nbsp;&nbsp;Резерв по переоценке инструментов, оцениваемых по справедливой стоимости через прочий совокупный доход</td><td>Revaluation reserves of instruments measured at fair value through the other comprehemsive income</td></tr>
+                <tr><td></td><td>&nbsp;&nbsp;Переоценка финансовых обязательств, относящаяся к собственному кредитному риску</td><td>Revaluation of financial liabilities resulting from the company’s default risk</td></tr>
+                <tr><td></td><td>&nbsp;&nbsp;Резерв по переоценке основных средств</td><td>Fixed assets’ revaluation reserves</td></tr>
+                <tr><td></td><td>&nbsp;&nbsp;Резерв по пересчёту иностранной валюты</td><td>Foreign currency revaluation reserves</td></tr>
+                <tr><td></td><td>Итого капитал собственников материнской компании</td><td>Total equity attributable to owners of parent</td></tr>
+                <tr><td>12107</td><td>Неконтролирующие доли участия (капитал консолидируемых компаний, принадлежащий лицам, не являющимся собственниками головной консолидирующей компании)</td><td>Non-controlling interests</td></tr>
+                <tr><td></td><td>Итого капитал</td><td>Total equity</td></tr>
+                <tr><td></td><td>Обязательства</td><td>Liabilities</td></tr>
+                <tr><td>12200</td><td>Долгосрочные обязательства</td><td>Non-current liabilities</td></tr>
+                <tr><td>12201</td><td>Кредиты и займы</td><td>Loans</td></tr>
+                <tr><td>12202</td><td>Обязательства по аренде</td><td>Rent liabilities</td></tr>
+                <tr><td>12203</td><td>Отложенные налоговые обязательства</td><td>Deferred tax liabilities</td></tr>
+                <tr><td>12204</td><td>Оценочные обязательства по выбытию активов</td><td>Asset retirement obligations</td></tr>
+                <tr><td>12205</td><td>Прочие долгосрочные обязательства</td><td>Other non-current liabilities</td></tr>
+                <tr><td>12206</td><td>Доходы будущих периодов</td><td>Deferred income</td></tr>
+                <tr><td></td><td>Итого долгосрочные обязательства</td><td>Total non-current liabilities</td></tr>
+                <tr><td>12300</td><td>Краткосрочные обязательства</td><td>Current liabilities</td></tr>
+                <tr><td></td><td>Краткосрочные резервы</td><td>Current provisions</td></tr>
+                <tr><td>12301</td><td>Кредиты и займы</td><td>Loans</td></tr>
+                <tr><td>12302</td><td>Обязательства по аренде</td><td>Rent liabilities</td></tr>
+                <tr><td>12303</td><td>Торговые и прочие краткосрочные обязательства</td><td>Trade and other current payables</td></tr>
+                <tr><td>12304</td><td>Обязательства по договорам с покупателями</td><td>Liabilities under contracts with customers</td></tr>
+                <tr><td>12305</td><td>Текущие налоговые обязательства</td><td>Current tax liabilities</td></tr>
+                <tr><td>12306</td><td>Кредиторская задолженность по прочим налогам</td><td>Creditors’ debt on other taxes</td></tr>
+                <tr><td>12307</td><td>Оценочные обязательства и отчисления</td><tD>Estimated liabilites</tD></tr>
+                <tr><td>12308</td><td>Обязательства выбывающих групп и классифицированные как предназначенные для продажи</td><td>Total current liabilities classified as held for sale</td></tr>
+                <tr><td></td><td>Итого краткосрочные обязательства</td><td>Total current liabilities</td></tr>
+                <tr><td></td><td>Итого обязательства</td><td>Total liabilities</td></tr>
+                <tr><td></td><td>Итого капитал и обязательства</td><td>Total equity and liabilities</td></tr>
+            </tbody>
+        </table>
+    </figure>
+
+    <p>О том, как построить Отчёт о движении денежных средств косвенным методом, рассказано в Главе 2. В комплекте отчётности по МСФО ОДДС может иметь следующий вид:</p>
+
+    <!-- ТАБЛИЦА 9.3 -->
+    <figure class="table">
+        <figcaption>Таб.9.3. Примерный формат отчёта о движении денежных средств по МСФО.</figcaption>
+        <table>
+            <colgroup>
+                <col style="width: 60%;">
+                <col style="width: 40%;">
+            </colgroup>
+            <tbody>
+                <tr><td>Денежные потоки от операционной деятельности</td><td>Cash flows from (used in) operating activities</td></tr>
+                <tr><td>Прибыль/(убыток) до налогообложения</td><td>Profit (loss)</td></tr>
+                <tr><td>Корректировки на:</td><td>Adjustments</td></tr>
+                <tr><td>Амортизацию и обесценение основных средств</td><td>Depreciation and impairment of property, plant and equipment expense</td></tr>
+                <tr><td>Обесценение гудвила</td><td>Impairment loss of goodwill</td></tr>
+                <tr><td>Амортизацию и обесценение прочих нематериальных активов</td><td>Depreciation and impairment of intangible assets</td></tr>
+                <tr><td>Чистый убыток от обесценения финансовых активов и активов по договорам с покупателями</td><td>Impairment loss of financial assets and customers' agreement</td></tr>
+                <tr><td>Списание стоимости внеоборотных активов, предназначенных для продажи (или выбывающих групп), до справедливой стоимости за вычетом затрат на выбытие</td><td>Fair value losses (gains) of long-term assets and disposable groups</td></tr>
+                <tr><td>Убыток (за вычетом прибыли) от выбытия основных средств</td><td>Losses (gains) on disposal of non-current assets</td></tr>
+                <tr><td>Финансовые доходы</td><td>Finance income</td></tr>
+                <tr><td>Финансовые расходы</td><td>Finance costs</td></tR>
+                <tr><td>Доход от дивидендов</td><td>Dividends received</td></tr>
+                <tr><td>Курсовые разницы</td><td>Foreign exchange gain (loss)</td></tr>
+                <tr><td>Прочие неденежные операционные расходы</td><td>Other non-cahs operating expenses</td></tr>
+                <tr><td>Доля в результатах ассоциированных организаций и совместных предприятиях</td><td>Share of income in associates and joint ventures</td></tr>
+                <tr><td>Итого ЧДП от операционной деятельности до изменений оборотного капитала</td><td>Total NCF from operations before changes in net working capital</td></tr>
+                <tr><td>Уменьшение/(увеличение) торговой и прочей дебиторской задолженности</td><td>Decrease/(increase) of trade and other receivables</td></tr>
+                <tr><td>Уменьшение/(увеличение) запасов</td><td>Decrease/(increase) of inventories</td></tr>
+                <tr><td>Увеличение/(уменьшение) торговой и прочей кредиторской задолженности</td><td>Increase/(decrease) of trade и other payables</td></tr>
+                <tr><td>Увеличение/(уменьшение) задолженности по налогам (кроме налогов на прибыль)</td><td>Increase/(decrease) of taxes payable (except income tax)</td></tr>
+                <tr><td>Итого Изменения в оборотном капитале</td><td>Total changes in net working capital</td></tr>
+                <tr><td>Налог на прибыль уплаченный</td><td>Income taxes refund (paid)</td></tr>
+                <tr><td>Проценты полученные</td><td>Interest received</td></tr>
+                <tr><td>Проценты уплаченные</td><td>Interest paid</td></tr>
+                <tr><td>Итого Чистая сумма денежных средств от операционной деятельности</td><td>Net cash flows from (used in) operating activities</td></tr>
+                <tr><td>Денежные потоки от инвестиционной деятельности</td><td>Cash flows from (used in) investing activities</td></tr>
+                <tr><td>Платежи за приобретение основных средств</td><td>Purchase of property, plant and equipment</td></tr>
+                <tr><td>Поступления от продажи основных средств</td><td>Proceeds from sales of property, plant and equipment</td></tr>
+                <tr><td>Платежи за приобретение нематериальных активов</td><td>Proceeds from sales of intangible assets</td></tr>
+                <tr><td>Поступления от продажи нематериальных активов</td><td>Purchase of intangible assets</td></tr>
+                <tr><td>Платежи за приобретение дочерних организаций</td><td>Cash flows used in obtaining control of subsidiaries или other businesses</td></tr>
+                <tr><td>Поступления от выбытия дочерних организаций</td><td>Cash flows from losing control of subsidiaries или other businesses</td></tr>
+                <tr><td>Платежи за приобретение ассоциированных организаций</td><td>Cash flows used in obtaining control of subsidiaries или other businesses</td></tr>
+                <tr><td>Поступления от выбытия ассоциированных организаций</td><td>Cash flows from losing control of subsidiaries или other businesses</td></tr>
+                <tr><td>Дивиденды полученные</td><td>Dividends received</td></tr>
+                <tr><td>Проценты полученные</td><td>Interest received</td></tr>
+                <tr><td>Займы выданные</td><td>Loans made to other parties</td></tr>
+                <tr><td>Займы возвращённые</td><td>Repayment loans made to other parties</td></tr>
+                <tr><td>Выплаты по контрактам на фьючерсы, форварды, опционы, своп-контрактам</td><td>Payments for futures contracts, forward contracts, option contracts и swap contracts</td></tr>
+                <tr><td>Поступления по контрактам на фьючерсы, форварды, опционы, своп-контрактам</td><td>Cash receipts from futures contracts, forward contracts, option contracts и swap contracts</td></tr>
+                <tr><td>Итого Чистая сумма денежных средств от инвестиционной деятельности</td><td>Net cash flows from (used in) investing activities</td></tr>
+                <tr><td>Денежные потоки от финансовой деятельности</td><td>Cash flows from financing activities</td></tr>
+                <tr><td>Поступление кредитов и займов</td><td>Proceeds from borrowings</td></tr>
+                <tr><td>Погашение кредитов и займов</td><td>Repayments of borrowings</td></tr>
+                <tr><td>Погашение обязательств по аренде – основная сумма</td><td>Payments of lease liabilities</td></tr>
+                <tr><td>Поступления от эмиссии обыкновенных акций</td><td>Proceeds from issuing shares</td></tr>
+                <tr><td>Поступления от эмиссии других долевых инструментов</td><td>Proceeds from issuing other equity instruments</td></tr>
+                <tr><td>Взносы в капитал, сделанные собственниками (кроме выпуска акций)</td><td>Payments to acquire или redeem entity's shares</td></tr>
+                <tr><td>Платежи за приобретение доли участия в дочерних организациях</td><td>Payments from changes in ownership interests in subsidiaries that do not result in loss of control</td></tr>
+                <tr><td>Поступления от продажи доли участия в дочерних организациях</td><td>Proceeds from changes in ownership interests in subsidiaries that do not result in loss of control</td></tr>
+                <tr><td>Дивиденды, уплаченные собственникам Организации</td><tD>Dividends paid to the owners of the Group</tD></tr>
+                <tr><td>Дивиденды, уплаченные неконтролирующей доле участия</td><td>Dividends paid to the non-controlling shareholders</td></tr>
+                <tr><td>Проценты уплаченные</td><td>Interest paid</td></tr>
+                <tr><td>Поступления по государственным субсидиям</td><td>Proceeds from government grants</td></tr>
+                <tr><td>Итого ЧДП от финансовой деятельности</td><td>Net cash flows from (used in) financing activities</td></tr>
+                <tr><td>Влияние изменения обменного курса валют на денежные средства</td><td>Effect of exchange rate changes on cash and cash equivalents</td></tr>
+                <tr><td>Денежные средства и эквиваленты денежных средств на начало года</td><td>Cash and cash equivalents at beginning of period</td></tr>
+                <tr><td>Денежные средства и эквиваленты денежных средств на конец года</td><td>Cash and cash equivalents at end of period</td></tr>
+            </tbody>
+        </table>
+    </figure>
+
+    <p>Помимо этих трех форм (четырех, если Отчёт о прочем доходе представлен как отдельная форма), в типичный комплект отчётности по МСФО и РСБУ входит также отчёт отчёт о движении капитала и пояснения. Отчёт о прочем совокупном доходе, как уже отмечалось в Главе 1, не актуален для финансовой модели, так как связан не с эффективностью бизнеса, а с использованием накопленной прибыли, и содержит такие детали, которые, как правило, не прогнозируются.</p>
+    <p>Отчёт о прочем совокупном доходе был введен в комплект отчётности сравнительно недавно, потому что оказалось, что довольно много доходов и расходов относят непосредственно на капитал, минуя отчёт о прибылях и убытках. Перечень статей и операций, которые влияют на размер капитала, но не фигурируют в прибылях и убытках, представлен в Таб.9.4.</p>
+
+    <!-- ТАБЛИЦА 9.4 -->
+    <figure class="table">
+        <figcaption>Таб.9.4. Примерный формат отчёта о прочем совокупном доходе.</figcaption>
+        <table>
+            <colgroup>
+                <col style="width: 65%;">
+                <col style="width: 35%;">
+            </colgroup>
+            <tbody>
+                <tr><td>Прочий совокупный доход</td><td>Other comprehensive income</td></tr>
+                <tr><td>Компоненты ПСД, которые не будут реклассифицированы в прибыли убытки (за вычетом налога):</td><td>Components of other comprehensive income that will not be reclassified to profit or loss, net of tax:</td></tr>
+                <tr><td>От изменения справедливой стоимости инвестиций в долевые инструменты</td><td>From investments in equity instruments</td></tr>
+                <tr><td>От переоценки основных средств и нематериальных активов</td><td>On revaluation of property, plant and equipment, right-of-use assets and intangible assets</td></tr>
+                <tr><td>От переоценки пенсионных планов</td><td>On remeasurements of defined benefit plans</td></tr>
+                <tr><td>Курсовая разница от пересчёта отчётности материнской компании в другую валюту</td><td>Exchange differences on translation, other than translation of foreign operations</td></tr>
+                <tr><td>Изменение справедливой стоимости финансового обязательства вследствие кредитного риска</td><td>Change in fair value of financial liability attributable to change in credit risk of liability</td></tr>
+                <tr><td>Прибыли (убытки) от хеджирования инвестиций в долевые инструменты</td><td>On hedging instruments that hedge investments in equity instruments</td></tr>
+                <tr><td>Прибыли (убытки) от выпущенных страховых контрактов, исключенные из прибылей убытков и которые не будут реклассифицированы в прибыли (убытки)</td><td>Insurance finance income (expenses) from insurance contracts issued excluded from profit or loss that will not be reclassified to profit or loss</td></tr>
+                <tr><td>Доля в прочем совокупном доходе ассоциированных и совместных предприятий по методу долевого участия</td><td>Share of other comprehensive income of associates и joint ventures accounted for using equity method that will not be reclassified to profit or loss, net of tax</td></tr>
+                <tr><td>Прочий совокупный доход, не реклассифицированный в прибыли убытки</td><td>Total other comprehensive income that will not be reclassified to profit or loss, net of tax</td></tr>
+                <tr><td>Компоненты ПСД, которые будут реклассифицированы в прибыли убытки (за вычетом налога):</td><td>Components of other comprehensive income that will be reclassified to profit or loss, net of tax:</td></tr>
+                <tr><td>Курсовые разницы от перевода иностранных операций в валюту отчётности</td><td>Exchange differences on translation of foreign operations</td></tr>
+                <tr><td>Поправки курсовых разниц от перевода иностранной отчётности при их реклассификации в прибыли убытки</td><td>Reclassification adjustments on exchange differences on translation of foreign operations</td></tr>
+                <tr><td>Прочий доход от реклассификации курсовых разниц по переводу иностранных операций в валюту отчётности</td><td>Other comprehensive income from exchange differences on translation of foreign operations</td></tr>
+                <tr><td>Прибыли убытки от переоценки финансовых активов для продажи</td><td>Gains (losses) on remeasuring available-for-sale financial assets</td></tr>
+                <tr><td>Поправки от реклассификации финансовых активов для продажи в прибыли (убытки)</td><td>Reclassification adjustments on available-for-sale financial assets</td></tr>
+                <tr><td>Прочий доход в отношении финансовых активов для продажи</td><td>Other comprehensive income, net of tax, available-for-sale financial assets</td></tr>
+                <tr><td>Прибыли (убытки) от хеджирования денег</td><td>Gains (losses) on cash flow hedges, net of tax</td></tr>
+                <tr><td>Прибыли (убытки) от хеджирования чистых инвестиций в иностранные операции</td><td>Gains (losses) on hedges of net investments in foreign operations, net of tax</td></tR>
+                <tr><td>Финансовые активы по справедливой стоимости через ПСД</td><td>Financial assets measured at fair value through other comprehensive income</td></tr>
+                <tr><td>Доля в прочем совокупном доходе ассоциированных компаний и совместных предприятий по методу долевого участия которая будет реклассифицирована в прибыли (убытки)</td><td>Share of other comprehensive income of associates и joint ventures accounted for using equity method that will be reclassified to profit or loss</td></tr>
+            </tbody>
+        </table>
+    </figure>
+
+    <p>В целях финансового моделирования будущие статьи отчёта о прочем совокупном доходе можно считать нулевыми. Но это не значит, что в финансовой модели не будет операций, которые включают в прочий совокупный доход. Просто эти операции можно сразу отражать в балансе по соответствующим статьям баланса (в частности, по статье «Курсовые разницы от пересчёта отчётности из функциональной валюты в валюту отчётности»), чтобы финансовая модель не стала слишком объёмной (краткость – одно из достоинств финансовой модели, так как слишком детальные прогнозы отвлекают от основных факторов, влияющих на бизнес, и мешают принимать управленческие решения). 
+
+</div>
+<a href="../index.html" class="return-link">← Вернуться к оглавлению</a>
+<footer class="site-footer">
+    <p>&copy; 2026 Александр Владимирович Семенович. Все права защищены.</p>
+</footer>
+
+</body>
+</html>
