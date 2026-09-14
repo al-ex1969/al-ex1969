@@ -198,16 +198,25 @@ body {
 
 /* МЕДИА-ЗАПРОСЫ (МОБИЛЬНЫЕ УСТРОЙСТВА) */
 @media (max-width: 768px) {
+    /* ... другие стили ... */
+    
     .toc-wide-nav {
         padding: 20px 25px;
         max-width: calc(100% - 30px);
     }
+    
+    /* Исправление: обнуляем левый отступ и выравниваем по левому краю */
     .toc-wide-nav li {
         padding-left: 0; 
+        min-height: 48px;
     }
-    .toc-wide-nav .number {
-        width: 85px; 
+    
+    /* Номера глав ("Глава 1.") на мобильном лучше убрать совсем или сделать меньше, 
+       чтобы они не накладывались на текст при переносе строк */
+    .toc-wide-nav li::before {
+        display: none; /* Скрываем номер главы на узких экранах */
     }
+    
     .toc-wide-nav a {
         padding-right: 10px;
     }
