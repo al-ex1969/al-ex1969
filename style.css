@@ -179,7 +179,7 @@ body {
     background-color: #f8fafc;
 }
 
-/* КОЛОНКА С НОМЕРАМИ ГЛАВ */
+/* КОЛОНКА С НОМЕРАМИ ГЛАВ (ДЕСКТОП) */
 .toc-wide-nav .number {
     flex-shrink: 0;
     width: 95px; 
@@ -196,7 +196,10 @@ body {
     word-break: normal;
 }
 
-/* МЕДИА-ЗАПРОСЫ (МОБИЛЬНЫЕ УСТРОЙСТВА) — ИСПРАВЛЕННАЯ ВЕРСИЯ */
+
+/* ============================================ */
+/*   МОБИЛЬНАЯ ВЕРСИЯ (Исправление верстки)     */
+/* ============================================ */
 @media (max-width: 768px) {
     .content-wrapper {
         padding: 15px;
@@ -205,25 +208,40 @@ body {
         padding: 30px 15px;
     }
     
-    /* === БЛОК ОГЛАВЛЕНИЯ (ТОЛЬКО ЗДЕСЬ) === */
+    /* === КРИТИЧЕСКОЕ ИСПРАВЛЕНИЕ TOC === */
     .toc-wide-nav {
         padding: 20px 25px;
         max-width: calc(100% - 30px);
     }
     
-    /* Главная ошибка была здесь: было 95px, стало 0 */
+    /* Полностью убираем фиксированную ширину номеров глав */
+    .toc-wide-nav .number {
+        display: none !important;
+    }
+    
+    /* Адаптируем ссылки: выравнивание по левому краю без отступа под номера */
+    .toc-wide-nav a {
+        justify-content: flex-start;
+        gap: 0;
+        padding-right: 10px;
+    }
+    
+    /* Настройка пунктов списка */
     .toc-wide-nav li {
         padding-left: 0; 
-        min-height: 48px;
+        min-height: auto;
     }
     
-    /* Скрываем номера "Глава X", так как они ломают верстку при переносе строк */
-    .toc-wide-nav li::before {
-        display: none;
+    /* Нижняя граница между главами */
+    .toc-wide-nav li + li {
+        border-top: 1px dashed var(--border-light);
+        padding-top: 16px;
     }
     
-    .toc-wide-nav a {
-        padding-right: 10px;
+    /* Для первой главы убираем верхнюю границу */
+    .toc-wide-nav li:first-child {
+        border-top: none;
+        padding-top: 0;
     }
     
     /* Остальные элементы страницы остаются без изменений */
@@ -255,6 +273,7 @@ body {
         line-height: 1.6;
     }
 }
+
 
 /* ============================================ */
 /*   СТИЛИ ДЛЯ ГЛАВ КНИГИ И ОСНОВНОГО КОНТЕНТА  */
@@ -304,17 +323,30 @@ table {
     border-collapse: collapse;
     word-wrap: anywhere;
 }
+
+/* ============================================ */
+/*      НОВЫЕ ПРАВИЛА: ШРИФТ ТОЛЬКО В ЯЧЕЙКАХ   */
+/* ============================================ */
+
+/* Основной текст внутри ячеек таблицы (+15-20% к размеру body) */
 th, td {
     border: 1px solid #ccc;
     padding: 8px 12px;
     vertical-align: middle;
     text-align: left;
     line-height: 1.7;
+    
+    /* Ключевое изменение: увеличиваем шрифт именно здесь */
+    font-size: clamp(21px, 2vw + 17px, 23px);
 }
+
+/* Специально для числовых данных — делаем их еще заметнее */
 .is-number,
 th.is-number + td {
     text-align: right;
     font-variant-numeric: tabular-nums;
+    /* Числа будут самыми крупными элементами в таблице */
+    font-size: clamp(22px, 2.2vw + 18px, 24px);
 }
 th.is-number {
     text-align: right;
@@ -358,9 +390,6 @@ table ol li::before {
     font-weight: 600;
     color: #333;
 }
-
-/* МЕДИА-ЗАПРОСЫ (МОБИЛЬНЫЕ УСТРОЙСТВА) — ПОВТОРНЫЙ БЛОК УДАЛЕН */
-/* Все остальные мобильные стили перенесены выше к .toc-wide-nav */
 
 .total-row {
     font-weight: bold;

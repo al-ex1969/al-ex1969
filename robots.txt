@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://адрес-вашего-сайта/sitemap.xml
+Host: https://fmodelling.ru
+Sitemap: https://fmodelling.ru/sitemap.xml
